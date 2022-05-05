@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BodyMap</string>
+    <string name="label_imc">IMC</string>
+    <string name="descricao_imc">IMC é a sigla para Índice de Massa Corporal que serve para avaliar
+        o peso do indivíduo em relação à sua altura e assim indicar se está dentro do peso ideal,
+        acima ou abaixo do peso desejado.\n\nPreencha os campos de peso e altura para descobrir o seu IMC</string>
+    <string name="hint_weigth">insira seu peso (KG)</string>
+    <string name="hint_height">insira sua altura (CM)</string>
+    <string name="calc">Calcular</string>
+    <string name="fields_messages">todos os campos devem ser diferentes de zero</string>
+
+    <string name="imc_severely_low_weight">Severamente abaixo do peso</string>
+    <string name="imc_very_low_weight">Muito abaixo do peso</string>
+    <string name="imc_low_weight">Abaixo do peso</string>
+    <string name="normal">Normal</string>
+    <string name="imc_high_weight">Acima do peso</string>
+    <string name="imc_so_high_weight">Moderadamente obeso</string>
+    <string name="imc_severely_high_weight">Severamente obeso</string>
+    <string name="imc_extreme_weight">Extremamente obeso</string>
+</resources>
