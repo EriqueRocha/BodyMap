@@ -1,6 +1,5 @@
 package co.eriquerocha.codelab.mayapplication;
 
-import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,37 +17,54 @@ public class TmbActivity extends AppCompatActivity {
     private EditText editHeight;
     private EditText editWeight;
     private EditText editAge;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tmb);
-        editHeight = findViewById(R.id.edit_imc_height);
-        editWeight = findViewById(R.id.edit_imc_weight);
+        editHeight = findViewById(R.id.edit_tmb_height);
+        editWeight = findViewById(R.id.edit_tmb_weight);
         editAge = findViewById(R.id.edit_tmb_age);
 
-        Button btnSend = findViewById(R.id.btn_imc_send);
+        Button btnSend = findViewById(R.id.btn_tmb_send);
 
         btnSend.setOnClickListener(view -> {
             if(!validate()){
                 Toast.makeText(TmbActivity.this, R.string.fields_messages, Toast.LENGTH_LONG).show();
                 return;
             }
-            String sHeight = editHeight.getText().toString();
-            String sWeight = editWeight.getText().toString();
+            String sAltura = editHeight.getText().toString();
+            String sPeso = editWeight.getText().toString();
+            String sIdade = editAge.getText().toString();
 
-            int height = Integer.parseInt(sHeight);
-            int weight = Integer.parseInt(sWeight);
+            int altura = Integer.parseInt(sAltura);
+            int peso = Integer.parseInt(sPeso);
+            int idade = Integer.parseInt(sIdade);
 
-            double result = calculateImc(height,weight);
-            Log.d("teste","resultado"+result);
+            double result = calculateTmb(peso, altura, idade);
+            double resultPouco = calculateTmbPouco(peso, altura, idade);
+            double resultModerado = calculateTmbModerado(peso, altura, idade);
+            double resultIntenso = calculateTmbIntenso(peso, altura, idade);
+            double resultMuitoIntenso = calculateTmbMuitoIntenso(peso, altura, idade);
+            Log.d("teste","nenhuma"+result);
+            Log.d("teste","pouco"+resultPouco);
+            Log.d("teste","moderado"+resultModerado);
+            Log.d("teste","intenso"+resultIntenso);
+            Log.d("teste","muito intenso"+resultMuitoIntenso);
 
-            int imcResponseId = imcResponse(result);
+           // int tmbResponseId = tmbResponse(result);
 
             // Toast.makeText(ImcActivity.this, imcResponseId, Toast.LENGTH_LONG).show();
 
             AlertDialog dialog = new AlertDialog.Builder(TmbActivity.this)
-                    .setTitle(getString(R.string.imc_response, result))
-                    .setMessage(imcResponseId)
+                    .setTitle(getString(R.string.title_tmb))
+                    .setMessage(getString(R.string.tmb_response, result) +
+                            getString(R.string.tmb_response2, resultPouco)+
+                            getString(R.string.tmb_response3, resultModerado)+
+                            getString(R.string.tmb_response4, resultIntenso)+
+                            getString(R.string.tmb_response5, resultMuitoIntenso))
+
+
                     .setPositiveButton(android.R.string.ok, (dialog1, which) -> {
 
                     })
@@ -61,28 +77,21 @@ public class TmbActivity extends AppCompatActivity {
             imm.hideSoftInputFromWindow(editHeight.getWindowToken(), 0);
         });
     }
-    @StringRes //garante que o retorno seja uma String
-    private int imcResponse(double imc){
-        if(imc < 15)
-            return R.string.imc_severely_low_weight;
-        else if (imc < 16)
-            return  R.string.imc_very_low_weight;
-        else if(imc < 18.5)
-            return R.string.imc_low_weight;
-        else if(imc<25)
-            return  R.string.normal;
-        else if(imc<30)
-            return R.string.imc_high_weight;
-        else if(imc<35)
-            return R.string.imc_so_high_weight;
-        else if (imc<40)
-            return R.string.imc_severely_high_weight;
-        else
-            return R.string.imc_extreme_weight;
-    }
 
-    private double calculateImc(int height, int weight){
-        return weight / (((double) height/100)*((double) height/100));
+    private double calculateTmb(int peso, int altura, int idade){
+        return 66 + (((double)13.8 *peso) + ((double)5 * altura) - ((double)6.8 * idade)*2);
+    }
+    private double calculateTmbPouco(int peso, int altura, int idade){
+        return 66 + (((double)13.8 *peso) + ((double)5 * altura) - ((double)6.8 * idade)*1.725);
+    }
+    private double calculateTmbModerado(int peso, int altura, int idade){
+        return 66 + (((double)13.8 *peso) + ((double)5 * altura) - ((double)6.8 * idade)*1.55);
+    }
+    private double calculateTmbIntenso(int peso, int altura, int idade){
+        return 66 + (((double)13.8 *peso) + ((double)5 * altura) - ((double)6.8 * idade)*1.375);
+    }
+    private double calculateTmbMuitoIntenso(int peso, int altura, int idade){
+        return 66 + (((double)13.8 *peso) + ((double)5 * altura) - ((double)6.8 * idade)*1);
     }
 
     private boolean validate(){

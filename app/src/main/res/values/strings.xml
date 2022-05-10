@@ -1,4 +1,6 @@
 <resources>
+
+
     <string name="app_name">BodyMap</string>
     <string name="label_imc">IMC</string>
     <string name="label_tmb">TMB</string>
@@ -23,10 +25,16 @@
     <string name="hint_age">Idade (anos)</string>
     <string name="descricao_tmb">Taxa metabólica basal é a quantidade  de energia, em calorias, que gastamos com o corpo em descanso. Calcular a TMB é o primeiro passo para estimar quantas calorias precisamos ingerir por dia para ganhar ou perder peso.</string>
 
+    <string name="tmb_response">1-TMB: %1$.2f para uma rotina sem atividade física --- </string>
+    <string name="tmb_response2"> 2-TMB: %1$.2f para 1 à 3 dias/semana com atividade física --- </string>
+    <string name="tmb_response3"> 3-TMB: %1$.2f para 3 à 5 dias/semana com atividade física --- </string>
+    <string name="tmb_response4"> 4-TMB: %1$.2f para 6 à 7 dias/semana com atividade física --- </string>
+    <string name="tmb_response5">5-TMB: %1$.2f para 2x/dia ou muito pesado</string>
     <string name="genero">Você é do genêro masculino?</string>
     <string name="title_genero">Pergunta de genêro</string>
     <string name="sim">Sim</string>
     <string name="não">Não</string>
+    <string name="title_tmb">Sua TMB:</string>
 
 
 </resources>
