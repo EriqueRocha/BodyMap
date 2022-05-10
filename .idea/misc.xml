@@ -3,6 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1465" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/bg_button_accent.xml" value="0.111" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/bg_button_accent2.xml" value="0.1895" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_baseline_accessibility_24.xml" value="0.1465" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_baseline_self_improvement_24.xml" value="0.1365" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_hexagon.xml" value="0.1905" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_hexagon__1_.xml" value="0.1905" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_hexagon__2_.xml" value="0.1365" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1465" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_meteor.xml" value="0.1905" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_meteor__1_.xml" value="0.1905" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_simple_shiny.xml" value="0.1905" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_simple_shiny__1_.xml" value="0.1905" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/ic_simple_shiny__2_.xml" value="0.1905" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/drawable/simple_shiny.xml" value="0.1" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/layout/activity_imc.xml" value="0.24909420289855072" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/layout/activity_main.xml" value="0.24909420289855072" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/layout/activity_tbm.xml" value="0.264" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/layout/activity_tmb.xml" value="0.2341485507246377" />
+        <entry key="..\:/Users/Gurick/AndroidStudioProjects/BodyMap/app/src/main/res/layout/main_item.xml" value="0.2341485507246377" />
         <entry key="..\:/Users/Gurick/AndroidStudioProjects/FitnessTracker/app/src/main/res/drawable/bg_button_accent.xml" value="0.1" />
         <entry key="..\:/Users/Gurick/AndroidStudioProjects/FitnessTracker/app/src/main/res/drawable/ic_baseline_accessibility_24.xml" value="0.1945" />
         <entry key="..\:/Users/Gurick/AndroidStudioProjects/FitnessTracker/app/src/main/res/layout/activity_imc.xml" value="0.25416666666666665" />

@@ -1,11 +1,13 @@
 package co.eriquerocha.codelab.mayapplication;
 
 import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,26 +26,46 @@ private EditText editWeight;
 
         Button btnSend = findViewById(R.id.btn_imc_send);
 
-        btnSend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!validate()){
-                    Toast.makeText(ImcActivity.this, R.string.fields_messages, Toast.LENGTH_LONG).show();
-                    return;
-                }
-                String sHeight = editHeight.getText().toString();
-                String sWeight = editWeight.getText().toString();
 
-                int height = Integer.parseInt(sHeight);
-                int weight = Integer.parseInt(sWeight);
+        // antes de usar o java8 os evetos eram declarados dessa maneira
+       // btnSend.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+           // public void onClick(View view) {
+             //
+              // }
 
-                double result = calculateImc(height,weight);
-                Log.d("teste","resultado"+result);
-
-                int imcResponseId = imcResponse(result);
-
-                Toast.makeText(ImcActivity.this, imcResponseId, Toast.LENGTH_LONG).show();
+        // com o java8 podemos fazer o uso de lambda
+        btnSend.setOnClickListener(view -> {
+            if(!validate()){
+                Toast.makeText(ImcActivity.this, R.string.fields_messages, Toast.LENGTH_LONG).show();
+                return;
             }
+            String sHeight = editHeight.getText().toString();
+            String sWeight = editWeight.getText().toString();
+
+            int height = Integer.parseInt(sHeight);
+            int weight = Integer.parseInt(sWeight);
+
+            double result = calculateImc(height,weight);
+            Log.d("teste","resultado"+result);
+
+            int imcResponseId = imcResponse(result);
+
+           // Toast.makeText(ImcActivity.this, imcResponseId, Toast.LENGTH_LONG).show();
+
+            AlertDialog dialog = new AlertDialog.Builder(ImcActivity.this)
+                    .setTitle(getString(R.string.imc_response, result))
+                    .setMessage(imcResponseId)
+                    .setPositiveButton(android.R.string.ok, (dialog1, which) -> {
+
+                    })
+                    .create();
+                    dialog.show();
+
+               //gerenciando o teclado
+             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(editWeight.getWindowToken(), 0);
+                imm.hideSoftInputFromWindow(editHeight.getWindowToken(), 0);
         });
     }
     @StringRes //garante que o retorno seja uma String

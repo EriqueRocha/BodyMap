@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">BodyMap</string>
     <string name="label_imc">IMC</string>
+    <string name="label_tmb">TMB</string>
     <string name="descricao_imc">IMC é a sigla para Índice de Massa Corporal que serve para avaliar
         o peso do indivíduo em relação à sua altura e assim indicar se está dentro do peso ideal,
         acima ou abaixo do peso desejado.\n\nPreencha os campos de peso e altura para descobrir o seu IMC</string>
@@ -17,4 +18,15 @@
     <string name="imc_so_high_weight">Moderadamente obeso</string>
     <string name="imc_severely_high_weight">Severamente obeso</string>
     <string name="imc_extreme_weight">Extremamente obeso</string>
+
+    <string name="imc_response">IMC: %1$.2f</string>
+    <string name="hint_age">Idade (anos)</string>
+    <string name="descricao_tmb">Taxa metabólica basal é a quantidade  de energia, em calorias, que gastamos com o corpo em descanso. Calcular a TMB é o primeiro passo para estimar quantas calorias precisamos ingerir por dia para ganhar ou perder peso.</string>
+
+    <string name="genero">Você é do genêro masculino?</string>
+    <string name="title_genero">Pergunta de genêro</string>
+    <string name="sim">Sim</string>
+    <string name="não">Não</string>
+
+
 </resources>

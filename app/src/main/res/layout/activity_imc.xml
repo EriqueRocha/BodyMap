@@ -27,16 +27,14 @@
             style="@style/EditTextForm"
             android:hint="@string/hint_weigth"
             android:inputType="number"
-            android:maxLength="3"
-             />
+            android:maxLength="3" />
 
         <EditText
             android:id="@+id/edit_imc_height"
             style="@style/EditTextForm"
             android:hint="@string/hint_height"
             android:inputType="number"
-            android:maxLength="3"
-             />
+            android:maxLength="3" />
 
         <Button
             android:id="@+id/btn_imc_send"
