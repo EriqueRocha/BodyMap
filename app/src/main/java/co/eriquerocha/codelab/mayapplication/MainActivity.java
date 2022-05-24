@@ -16,6 +16,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -116,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
 			public void bind(MainItem item){
 				TextView textName = itemView.findViewById(R.id.item_txt_name);
 				ImageView imgIcon = itemView.findViewById(R.id.item_img_icon);
-				LinearLayout btnImc = (LinearLayout) itemView.findViewById(R.id.btn_imc);
+				ConstraintLayout btnImc = (ConstraintLayout) itemView.findViewById(R.id.btn_imc);
+				CardView btnImcColor = (CardView) itemView.findViewById(R.id.btn_imc_color);
 
 				btnImc.setOnClickListener(view -> {
 					listener.onClick(item.getId());
@@ -124,7 +127,8 @@ public class MainActivity extends AppCompatActivity {
 
 				textName.setText(item.getTextStringId());
 				imgIcon.setImageResource(item.getDrawableId());
-				btnImc.setBackgroundColor(item.getColor());
+				btnImcColor.setCardBackgroundColor(item.getColor());
+
 
 			}
 		}
